@@ -4,7 +4,6 @@ html{
 }
 
 .container-3 {
-    
     padding: 10px;
     background-color: rgb(15, 119, 216);
     width: 250px;
@@ -38,4 +37,8 @@ header {
     color: white;
     font-family: "Helvetica";
     font-weight: bold;
+}
+
+h1 {
+    text-align: center;
 }
