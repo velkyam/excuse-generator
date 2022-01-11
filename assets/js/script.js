@@ -2,13 +2,28 @@ var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/'
 var cars = ["Good morning", "Good afternoon", "Good evening" , "Hey"];
 
 //random excuse, to add category and number -> add {category}/{number} to the url
+var newExBtn=document.querySelector('#newExBtn')
+var copyBtn=document.querySelector('#copyBtn')
+var excuseText = document.querySelector('#excuse-input')
+
+function newExcuse(){
 fetch(requestUrl2)
 .then(function (response) {
   return response.json();
 })
 .then(function (data) {
-  console.log(data)
+  excuseText.value = data[0].excuse
 });
+}
+//copy button
+copyBtn.addEventListener('click',function(event){
+
+  navigator.clipboard.writeText(excuseText.value);
+})
+//new excuse button
+newExBtn.addEventListener('click',function(event){
+  newExcuse()
+})
 
 //synonym app starts here
 var synTable = document.querySelector('#synTable')
