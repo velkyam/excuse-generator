@@ -1,10 +1,14 @@
 html{
     background-color: grey;
+    align-content: center;
 }
 
 .excuse-container {
+    
     padding: 10px;
     background-color: rgb(15, 119, 216);
+    width: 250px;
+    text-align: center;
 }
 
 .button-card {
@@ -17,6 +21,8 @@ button {
     background-color: grey;
     font-family: "Helvetica";
     color: white;
+    border-radius: 25%;
+    border: solid grey;
 }
 button:hover {
     cursor: pointer;
@@ -26,4 +32,10 @@ button:hover {
     height:200px;
     width: 200px;
     font-size:10px;
+}
+header {
+    font-size: 18px;
+    color: white;
+    font-family: "Helvetica";
+    font-weight: bold;
 }
