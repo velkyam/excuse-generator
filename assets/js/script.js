@@ -58,7 +58,8 @@ var requestUrl = 'https://www.dictionaryapi.com/api/v3/references/thesaurus/json
   }
   
   synBtn.addEventListener('click',function(event){
-  
+    
+    
     synUL.innerHTML ='';
     synonymRun()
     //deletes the word from the box
@@ -68,4 +69,4 @@ var requestUrl = 'https://www.dictionaryapi.com/api/v3/references/thesaurus/json
   //synonym app ends here
 
   // greetings array not connected to anything yet
-  document.getElementById("").innerHTML = greetings;
+  // document.getElementById("").innerHTML = greetings;
