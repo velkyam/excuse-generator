@@ -50,3 +50,8 @@ h1 {
     text-align: center;
     border-radius: 10%;
 }
+
+p {
+    color: white;
+    font-family: "Helvetica";
+}
