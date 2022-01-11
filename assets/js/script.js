@@ -1,5 +1,5 @@
 
-var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/3'
+var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/'
 var greetings = ['Good morning,', 'Good afternoon,', 'Good evening,'];
 var informalGreeting = ['Hey,' , 'Hi,' , 'Whats shakin bacon' , 'Yo'];
 var emailClosing = ['Sincerely,' ,'See you soon,', 'Thank you for understanding'];
@@ -59,7 +59,8 @@ var requestUrl = 'https://www.dictionaryapi.com/api/v3/references/thesaurus/json
   }
   
   synBtn.addEventListener('click',function(event){
-  
+    
+    
     synUL.innerHTML ='';
     synonymRun()
     //deletes the word from the box
@@ -69,4 +70,4 @@ var requestUrl = 'https://www.dictionaryapi.com/api/v3/references/thesaurus/json
   //synonym app ends here
 
   // greetings array not connected to anything yet
-  document.getElementById("").innerHTML = greetings;
+  // document.getElementById("").innerHTML = greetings;
