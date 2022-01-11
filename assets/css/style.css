@@ -1,3 +1,29 @@
 html{
-    background-color: blueviolet;
+    background-color: grey;
+}
+
+.excuse-container {
+    padding: 10px;
+    background-color: rgb(15, 119, 216);
+}
+
+.button-card {
+    font-size: 15px;
+    padding: 3px;
+    
+}
+
+button {
+    background-color: grey;
+    font-family: "Helvetica";
+    color: white;
+}
+button:hover {
+    cursor: pointer;
+
+}
+#excuse-input {
+    height:200px;
+    width: 200px;
+    font-size:10px;
 }
