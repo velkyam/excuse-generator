@@ -1,5 +1,11 @@
+
 var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/'
-var cars = ["Good morning", "Good afternoon", "Good evening" , "Hey"];
+var greetings = ['Good morning,', 'Good afternoon,', 'Good evening,'];
+var informalGreeting = ['Hey,' , 'Hi,' , 'Whats shakin bacon' , 'Yo'];
+var emailClosing = ['Sincerely,' ,'See you soon,', 'Thank you for understanding'];
+var apologies = ['Im sooo sorry' , 'Sorry in advance' , 'I apologize for any inconvience']
+
+
 
 //random excuse, to add category and number -> add {category}/{number} to the url
 var newExBtn=document.querySelector('#newExBtn')
@@ -60,3 +66,6 @@ var requestUrl = 'https://www.dictionaryapi.com/api/v3/references/thesaurus/json
   })
 
   //synonym app ends here
+
+  // greetings array not connected to anything yet
+  document.getElementById("").innerHTML = greetings;
