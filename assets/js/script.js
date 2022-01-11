@@ -1,4 +1,5 @@
 var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/'
+var cars = ["Good morning", "Good afternoon", "Good evening" , "Hey"];
 
 //random excuse, to add category and number -> add {category}/{number} to the url
 fetch(requestUrl2)
