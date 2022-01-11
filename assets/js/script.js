@@ -12,6 +12,8 @@ fetch(requestUrl2)
     console.log(data)
 });
 
+
+
 //synonyms -> data[1].meta.syns
   fetch(requestUrl)
     .then(function (response) {
@@ -19,4 +21,5 @@ fetch(requestUrl2)
     })
     .then(function (data) {
       console.log(data)
+
     });
