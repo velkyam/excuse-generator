@@ -12,14 +12,18 @@ fetch(requestUrl2)
     console.log(data)
 });
 
+var synInput = document.querySelector('#synInput').value
+var synBtn = document.querySelector('#synBtn')
 
+synBtn.addEventListener('click',function(event){
 
-//synonyms -> data[1].meta.syns
-  fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data)
-
-    });
+  //synonyms -> data[1].meta.syns
+    fetch(requestUrl)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data)
+  
+      });
+})
