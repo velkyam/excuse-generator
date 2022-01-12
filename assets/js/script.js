@@ -35,24 +35,6 @@ destroyBtn.addEventListener('click', function (event) {
 })
 
 
-<<<<<<< HEAD
-
-
-//random excuse, to add category and number -> add {category}/{number} to the url
-var newExBtn = document.querySelector('#newExBtn')
-var copyBtn = document.querySelector('#copyBtn')
-var excuseText = document.querySelector('#excuse-input')
-
-function newExcuse() {
-  fetch(requestUrl2)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      excuseText.value = data[0].excuse
-    });
-}
-=======
 
 //random excuse, to add category and number -> add {category}/{number} to the url
 var newExBtn=document.querySelector('.newExBtn')
@@ -60,15 +42,11 @@ var copyBtn=document.querySelector('#copyBtn')
 var excuseText = document.querySelector('#excuse-input')
 
 
->>>>>>> dev
 //copy button
 copyBtn.addEventListener('click', function (event) {
   navigator.clipboard.writeText(excuseText.value);
 })
 //new excuse button
-<<<<<<< HEAD
-newExBtn.addEventListener('click', function (event) {
-=======
 newExBtn.addEventListener('click',function(event){
   var category = document.querySelector('#category').value
   var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/'+category
@@ -83,7 +61,6 @@ fetch(requestUrl2)
   console.log(data)
 });
 }
->>>>>>> dev
   newExcuse()
 })
 
@@ -111,18 +88,6 @@ function synonymRun() {
         if (i === 10) { break; }
       }
     });
-<<<<<<< HEAD
-}
-
-synBtn.addEventListener('click', function (event) {
-
-
-  synUL.innerHTML = '';
-  synonymRun()
-  //deletes the word from the box
-  synInput.value = ""
-})
-=======
   }
   
   synBtn.addEventListener('click',function(event){
@@ -133,6 +98,5 @@ synBtn.addEventListener('click', function (event) {
     //deletes the word from the box
     synInput.value=""
   })
->>>>>>> dev
 
   //synonym app ends here
