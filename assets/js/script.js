@@ -5,6 +5,7 @@ var informalGreeting = ['Hey,' , 'Hi,' , 'Whats shakin bacon' , 'Yo'];
 var emailClosing = ['Sincerely,' ,'See you soon,', 'Thank you for understanding'];
 var apologies = ['Im sooo sorry' , 'Sorry in advance' , 'I apologize for any inconvience']
 
+M.AutoInit();
 
 
 //random excuse, to add category and number -> add {category}/{number} to the url
