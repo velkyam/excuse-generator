@@ -55,3 +55,13 @@ p {
     color: white;
     font-family: "Helvetica";
 }
+
+/* .modal-close {
+    margin: 0;
+    position: absolute;
+    opacity: 1;
+    z-index: 10;
+    cursor: pointer;
+    top: 50px;
+    right: 80px;
+    } */
