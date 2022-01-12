@@ -19,25 +19,34 @@
     <h1>Excuse Generator</h1>
 
     <!-- step 2: user input form starts here -->
-    <div>
-        <section class="container-2">
-            <header>Step 2</header>
-            <p>Receiver:</p>
-            <input id="key-input" type="text">
-            <p>Username:</p>
-            <input id="key-input" type="text">
-            <p>Keywords:</p>
-            <input id="key-input" type="text">
-            <p>Category:</p>
-            <form>
-                <select name="dropdown">
-                    <option value="1" selected>Family</option>
-                    <option value="102">Office</option>
-                    <option value="203">Children</option>
-                    <option value="304">College</option>
-                    <option value="405">Party</option>
-                </select>
-            </form>
+    <div class="row">
+       <section class="indigo darken-4 col s12 m6 l4 m-6 offset-l4 offset-m3">
+            <header class="center-align">We need some info</header>
+            
+            <input class="center-align" placeholder="Enter Receiver's Name"id="reciver-input" type="text">
+          
+            <input class="center-align" placeholder="Enter Your Name"id="user-input" type="text">
+        
+            <div class="input-field col s12">
+            <select class="browser-default">
+            <option value="" disabled selected>Email or Text?</option>
+            <option value="1">Email</option>
+            <option value="2">Text</option>
+            </select>
+            </div>
+            <br>
+            <div class="input-field col s12">
+            <select class="browser-default" id="category">
+            <option value="" disabled selected>Excuse Category</option>
+            <option value="family">Family</option>
+            <option value="office">Office</option>
+            <option value="children">Children</option>
+            <option value="college">College</option>
+            <option value="party">Party</option>
+            </select>
+            <br>
+            <button class="newExBtn waves-effect waves-light btn col s6 offset-s3">Get Excuse</button>
+            </div>
         </section>
     </div>
     <!-- end of user input form -->
@@ -47,16 +56,16 @@
 
     <!-- Step 3: excuse container -->
     <div>
-        <section class="container-3">
-            <header>Step Three</header>
-            <input id="excuse-input" type="text">
-            <br><br>
-            <div class="button-card">
-                <button id="newExBtn">New Excuse</button>
-                <button id="copyBtn">Copy</button>
-            </div>
-        </section>
-    </div> 
+    <section class="container-3">
+        <header>Step Three</header>
+        <input id="excuse-input" type="text">
+        <br><br>
+        <div class="button-card">
+            <button class="newExBtn waves-effect waves-light btn">New Excuse</button>
+            <button class="waves-effect waves-light btn" id="copyBtn">Copy</button>
+        </div>
+    </section>
+    </div>
     <!-- end of excuse container -->
 
     <!-- Modal Trigger -->

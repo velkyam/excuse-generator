@@ -1,3 +1,4 @@
+M.AutoInit();
 
 var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/'
 var greetings = ['Good morning,', 'Good afternoon,', 'Good evening,'];
@@ -5,23 +6,13 @@ var informalGreeting = ['Hey,' , 'Hi,' , 'Whats shakin bacon' , 'Yo'];
 var emailClosing = ['Sincerely,' ,'See you soon,', 'Thank you for understanding'];
 var apologies = ['Im sooo sorry' , 'Sorry in advance' , 'I apologize for any inconvience']
 
-M.AutoInit();
-
 
 //random excuse, to add category and number -> add {category}/{number} to the url
-var newExBtn=document.querySelector('#newExBtn')
+var newExBtn=document.querySelector('.newExBtn')
 var copyBtn=document.querySelector('#copyBtn')
 var excuseText = document.querySelector('#excuse-input')
 
-function newExcuse(){
-fetch(requestUrl2)
-.then(function (response) {
-  return response.json();
-})
-.then(function (data) {
-  excuseText.value = data[0].excuse
-});
-}
+
 //copy button
 copyBtn.addEventListener('click',function(event){
 
@@ -29,6 +20,19 @@ copyBtn.addEventListener('click',function(event){
 })
 //new excuse button
 newExBtn.addEventListener('click',function(event){
+  var category = document.querySelector('#category').value
+  var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/'+category
+  console.log(category)
+  function newExcuse(){
+fetch(requestUrl2)
+.then(function (response) {
+  return response.json();
+})
+.then(function (data) {
+  excuseText.value = data[0].excuse
+  console.log(data)
+});
+}
   newExcuse()
 })
 
@@ -60,7 +64,7 @@ var requestUrl = 'https://www.dictionaryapi.com/api/v3/references/thesaurus/json
   
   synBtn.addEventListener('click',function(event){
     
-    
+    //resets the list
     synUL.innerHTML ='';
     synonymRun()
     //deletes the word from the box
@@ -68,6 +72,3 @@ var requestUrl = 'https://www.dictionaryapi.com/api/v3/references/thesaurus/json
   })
 
   //synonym app ends here
-
-  // greetings array not connected to anything yet
-  // document.getElementById("").innerHTML = greetings;

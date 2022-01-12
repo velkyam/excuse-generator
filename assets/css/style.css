@@ -11,23 +11,7 @@ html{
     border-radius: 10%;
 }
 
-.button-card {
-    font-size: 15px;
-    padding: 3px;
-    
-}
 
-button {
-    background-color: grey;
-    font-family: "Helvetica";
-    color: white;
-    border-radius: 25%;
-    border: solid grey;
-}
-button:hover {
-    cursor: pointer;
-
-}
 #excuse-input {
     height:200px;
     width: 200px;
