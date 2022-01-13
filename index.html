@@ -19,42 +19,42 @@
 <!-- Main Container Start -->
     <div class="row">
         
-       <section class="white mainContainer col s10 m6 l4 m-6 offset-l4 offset-m3 offset-s1">
-        <h2>Excuse Generator</h2>
-            <div class="containerEL">
-            <input class="center-align" placeholder="Enter Receiver's Name"id="receiver-input" type="text">
+       <section class="white col s10 m6 l4 m-6 offset-l4 offset-m3 offset-s1 mainContainer">
+           <div class="selectCont">
+            <h2 class="header">Excuse Generator</h2>
+            <div class="input-field">
+                <p class="label">Enter recipient's name:</p>
+                <input placeholder="John, Mark, Sarah, ..."id="receiver-input" type="text">
             </div>
-            <div class="containerEL">
-            <input class="center-align" placeholder="Enter Your Name"id="user-input" type="text">
+            <div class="input-field">
+                <p class="label">Enter your name:</p>
+                <input placeholder="Alex, Bernardo, Dat, Lorena, ..."id="user-input" type="text">
             </div>
-            <div class="input-field col s12">
-            <select id="emailText" class="containerEL">
-            <option value="" disabled selected>Email or Text?</option>
-            <option value='0'>Email</option>
-            <option value='1'>Text</option>
-            </select>
+                <div class="input-field">
+                    <p class="label">Are you sending email or text?</p>
+                    <select id="emailText">
+                        <option value="" disabled selected>Email or Text?</option>
+                        <option value='0'>Email</option>
+                        <option value='1'>Text</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <p class="label">What occasion is your excuse for?</p>
+                    <select id="category">
+                        <option value="" disabled selected class="selectPlace">Excuse Category</option>
+                        <option value="family">Family</option>
+                        <option value="office">Office</option>
+                        <option value="children">Children</option>
+                        <option value="college">College</option>
+                        <option value="party">Party</option>
+                    </select>
+                </div>
             </div>
-            <br>
-            <div class="input-field col s12 containerEL">
-            <select id="category">
-            <option value="" disabled selected>Excuse Category</option>
-            <option value="family"><i class="material-icons"></i>Family</option>
-            <!-- Test -->
-            <option value="office"><i class="material-icons">work</i>Office</option>
+            <button id="newExBtn"class= "waves-effect waves-light btn col s6 offset-s3 modal-trigger" href="#modal1" >Get Excuse</button>
+            </section>
+        </div>
+        <!-- Main Container End -->
 
-            <option value="office"><li><a href="#!"><i class="material-icons">work</i></a></li><i class="material-icons">work</i>Office</option>
-
-            <option value="children"><i class="material-icons"></i>Children</option>
-            <option value="college"><i class="material-icons"></i>College</option>
-            <option value="party"><i class="material-icons"></i>Party</option>
-            </select>
-            <br>
-            <button id="newExBtn"class= "waves-effect waves-light btn col s6 offset-s3 modal-trigger containerEL" href="#modal1">Get Excuse</button>
-            </div>
-        </section>
-    </div>
-   <!-- Main Container End -->
-   <br><br>
 
    <!-- Excuse container -->
   <div id="modal1" class="modal">
@@ -66,7 +66,7 @@
        <!-- Synonym App Starts Here -->
     <div id="synTable">
         <h5>Use our Thesaurus:</h5>
-        <input type="text" id="synInput" name="synInput"></input>
+        <input type="text" id="synInput" name="synInput" placeholder="Enter your word"></input>
         <button class="waves-effect waves-light btn col s6 offset-s3" id="synBtn">Find better word</button>
         <ul id="synonyms"></ul>
     </div>
