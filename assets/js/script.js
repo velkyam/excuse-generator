@@ -32,7 +32,7 @@ var nameField = document.querySelector('#nameField')
 
 var email = document.querySelector('#email')
 var text = document.querySelector('#text')
-var emailText = 5
+var emailText = 0
 
 
 //new email button
@@ -97,14 +97,23 @@ newExBtn.addEventListener('click',function(event){
         var apiExcuse = data[0].death
       }
 
+      var emptyUser = ""
+      var emptyReceiver = ""
+      
+      if (userName.value=="" || userName.value==null){
+        var emptyUser = "[Your Name]"
+      } 
+      if (receiver.value=="" || receiver.value==null){
+        var emptyReceiver = "[Recipient's Name]"
+      }
       
       // Full excuse
       if (emailText === 0){
         // email 
-        excuseText.value = greeting + receiver.value + ", "+'\r\n' +'\r\n' +apiExcuse + apologies[apologiesIndex]+'\r\n'+'\r\n' + emailClosing[emailIndex]+'\r\n'+'\r\n'+ userName.value;
+        excuseText.value = greeting + receiver.value+ emptyReceiver + ", "+'\r\n' +'\r\n' +apiExcuse + apologies[apologiesIndex]+'\r\n'+'\r\n' + emailClosing[emailIndex]+'\r\n'+'\r\n'+ userName.value+emptyUser;
       } else if(emailText === 1) {
         // text
-        excuseText.value= informalGreeting[informalIndex]+receiver.value+". "+ " Sorry but... "+apiExcuse 
+        excuseText.value= informalGreeting[informalIndex]+receiver.value+emptyReceiver+". "+ " Sorry but... "+apiExcuse 
       }
     });
   }
