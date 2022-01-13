@@ -35,7 +35,8 @@
 
                 <div>
                     <p class="label">Are you sending email or text?</p>
-                    <a id="dropBtn" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Email or SMS?  <i class="material-icons">arrow_drop_down</i></a>
+                    <a id="dropBtn" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Email or SMS? <i
+                            class="material-icons">arrow_drop_down</i></a>
                     <ul id='dropdown1' class='dropdown-content'>
                         <li><a id="email"><i class="material-icons">email</i>Email</a></li>
                         <li class="divider" tabindex="-1"></li>
@@ -73,6 +74,9 @@
             <!-- oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' -->
             <textarea class="excuseArea" id="excuse-input" name="text" rows="4" cols="50"> </textarea>
             <button class="waves-effect waves-light btn col s6 offset-s3" id="copyBtn">Copy Excuse</button>
+            <button class="waves-effect waves-light btn col s6 offset-s3" id="mailBtn">
+                <a href="mailto:?to=&body=AAA,&subject=BBB #ffffff">MAIL</a>
+            </button>
             <!-- Synonym App Starts Here -->
             <div id="synTable">
                 <h5>Use our Thesaurus:</h5>
