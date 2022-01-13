@@ -28,27 +28,24 @@
                     <p class="label">Enter recipient's name:</p>
                     <input placeholder="John, Mark, Sarah, ..." id="receiver-input" type="text">
                 </div>
-                <div class="input-field">
-                    <p class="label">Enter your name:</p>
-                    <input placeholder="Alex, Bernardo, Dat, Lorena, ..." id="user-input" type="text">
-                </div>
-
+                
                 <div>
                     <p class="label">Are you sending email or text?</p>
-                    <a id="dropBtn" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Email or SMS? <i
-                            class="material-icons">arrow_drop_down</i></a>
+                    <a id="dropBtn" id="emailText" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Email or SMS?  <i class="material-icons">arrow_drop_down</i></a>
                     <ul id='dropdown1' class='dropdown-content'>
                         <li><a id="email"><i class="material-icons">email</i>Email</a></li>
                         <li class="divider" tabindex="-1"></li>
                         <li><a id="text"><i class="material-icons">sms</i>SMS</a></li>
                     </ul>
                 </div>
+                
+                <div id="nameField" class="input-field" hidden>
+                    <p class="label">Enter your name:</p>
+                    <input placeholder="Alex, Bernardo, Dat, Lorena, ..." id="user-input" type="text">
+                </div>
 
-
-
-
-
-                <div class="input-field">
+                <!-- Category hidden -->
+                <!-- <div class="input-field">
                     <p class="label">What occasion is your excuse for?</p>
                     <select id="category">
                         <option value="" disabled selected class="selectPlace">Excuse Category</option>
@@ -58,8 +55,9 @@
                         <option value="college">College</option>
                         <option value="party">Party</option>
                     </select>
-                </div>
-            </div>
+                </div> 
+            </div> -->
+
             <button id="newExBtn" class="waves-effect waves-light btn col s6 offset-s3 modal-trigger" href="#modal1">Get
                 Excuse</button>
         </section>
