@@ -26,7 +26,7 @@ destroyBtn.addEventListener('click', function (event) {
 
 var time = moment().format("H")
 var requestUrl2 = 'https://excuser.herokuapp.com/v1/excuse/'
-var greetingsArray = ['Good morning,', 'Good afternoon,', 'Good evening', 'Hello'];
+var greetingsArray = ['Good morning ', 'Good afternoon ', 'Good evening ', 'Hello '];
 var informalGreeting = ['Hey ', 'Hi ', 'Whats shakin bacon ', 'Yo ', 'Sup '];
 var emailClosing = ['Sincerely,', 'Best regards,', 'Best,'];
 var apologies = [" I'm so sorry.", ' Sorry in advance.', ' I apologize for any inconvience.', ' Thank you for understanding.']
@@ -54,8 +54,10 @@ if (time>=5&&time<11){
 
 //new excuse button
 newExBtn.addEventListener('click',function(event){
-  
-  var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/'+category.value
+  // add +category.value to theURL to get excuse from category
+  var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/'
+  var emailCat=['office', 'children', 'college']
+  var textCat=['party','office','children', 'college']
   var  emailIndex = Math.floor(Math.random()*(emailClosing.length))
   var  apologiesIndex = Math.floor(Math.random()*(apologies.length))
   var  informalIndex = Math.floor(Math.random()*(informalGreeting.length))
