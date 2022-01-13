@@ -1,27 +1,20 @@
 M.AutoInit();
 
-///  Individual element Init
-var dropBtn = document.querySelector('#dropBtn');
+//////     Individual element Init        TEST    ///////
 
-function init() {
-  var elems = document.querySelectorAll('.dropdown-trigger');
-  var dropdownOptions = {
-    'hover': false
-  }
-  dropBtn = M.Dropdown.init(elems, dropdownOptions);
-}
+// function init() {
+//   var elems = document.querySelectorAll('.dropdown-trigger');
+//   var dropdownOptions = {
+//     'hover': false
+//   }
+//   dropBtn = M.Dropdown.init(elems, dropdownOptions);
+// }
 
-init();
+// var instance = M.Dropdown.getInstance(dropdown1);
 
+// init();
 
-var instance = M.Dropdown.getInstance(dropdown1);
-
-var destroyBtn = document.querySelector('#destroy');
-
-destroyBtn.addEventListener('click', function (event) {
-  // instance.destroy();
-  console.log("destroy_btn")
-})
+//////     Individual element Init        TEST    ///////
 
 
 var time = moment().format("H")
