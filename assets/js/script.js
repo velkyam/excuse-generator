@@ -31,7 +31,7 @@ var receiver =document.querySelector('#receiver-input')
 var userName =document.querySelector('#user-input')
 var email = document.querySelector('#email')
 var text = document.querySelector('#text')
-var emailText = 5
+var emailText = 0
 
 
 
