@@ -1,20 +1,17 @@
 M.AutoInit();
 
-//////     Individual element Init        TEST    ///////
+function init() {
+  var elems = document.querySelectorAll('.dropdown-trigger');
+  var dropdownOptions = {
+    'hover': false
+  }
+  dropBtn = M.Dropdown.init(elems, dropdownOptions);
+}
 
-// function init() {
-//   var elems = document.querySelectorAll('.dropdown-trigger');
-//   var dropdownOptions = {
-//     'hover': false
-//   }
-//   dropBtn = M.Dropdown.init(elems, dropdownOptions);
-// }
+var instance = M.Dropdown.getInstance(dropdown1);
 
-// var instance = M.Dropdown.getInstance(dropdown1);
+init();
 
-// init();
-
-//////     Individual element Init        TEST    ///////
 
 
 var time = moment().format("H")
@@ -32,7 +29,21 @@ var excuseText = document.querySelector('#excuse-input')
 var category = document.querySelector('#category')
 var receiver =document.querySelector('#receiver-input')
 var userName =document.querySelector('#user-input')
-var emailText = document.querySelector('#emailText')
+var email = document.querySelector('#email')
+var text = document.querySelector('#text')
+var emailText = 5
+
+
+//new email button
+email.addEventListener('click',function(event){
+  emailText = 0
+})
+
+//new text button
+text.addEventListener('click',function(event){
+  emailText = 1
+})
+
 
 //Email Greetings based on time
 if (time>=5&&time<11){
@@ -68,10 +79,10 @@ newExBtn.addEventListener('click',function(event){
       }
       
       // Full excuse
-      if (emailText.value==='0'){
+      if (emailText === 0){
         // email 
         excuseText.value = greeting + receiver.value + ", "+'\r\n' +'\r\n' +apiExcuse + apologies[apologiesIndex]+'\r\n'+'\r\n' + emailClosing[emailIndex]+'\r\n'+'\r\n'+ userName.value;
-      } else if(emailText.value==='1') {
+      } else if(emailText === 1) {
         // text
         excuseText.value= informalGreeting[informalIndex]+receiver.value+". "+ " Sorry but... "+apiExcuse 
       }
