@@ -34,6 +34,7 @@ var text = document.querySelector('#text')
 var emailText = 5
 
 
+
 //new email button
 email.addEventListener('click',function(event){
   emailText = 0
@@ -79,6 +80,7 @@ newExBtn.addEventListener('click',function(event){
       }
       
       // Full excuse
+      
       if (emailText === 0){
         // email 
         excuseText.value = greeting + receiver.value + ", "+'\r\n' +'\r\n' +apiExcuse + apologies[apologiesIndex]+'\r\n'+'\r\n' + emailClosing[emailIndex]+'\r\n'+'\r\n'+ userName.value;
