@@ -1,41 +1,53 @@
-html{
-    background-color: grey;
+html {
+    background-color: #e0e0e0;
     align-content: center;
 }
 
-.container-3 {
-    padding: 10px;
-    background-color: rgb(15, 119, 216);
-    width: 250px;
+.header {
+   margin-bottom: 60px;
+}
+
+h2 {
     text-align: center;
-    border-radius: 10%;
+    color: #4db6ac;
 }
 
 
-#excuse-input {
-    height:200px;
-    width: 200px;
-    font-size:10px;
+.mainContainer{
+    border: solid gray 1px;
+    border-radius: 15px;
+    box-shadow: 5px 3px 3px gray ;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 860px;
+    margin-top: 100px;
 }
-header {
+.label{
     font-size: 18px;
-    color: white;
-    font-family: "Helvetica";
+    margin: 20px 0px;
     font-weight: bold;
 }
 
-h1 {
-    text-align: center;
-}
-.container-2 {
-    padding: 10px;
-    background-color: rgb(15, 119, 216);
-    width: 250px;
-    text-align: center;
-    border-radius: 10%;
+.excuseArea
+{
+    height: 280px;
+    border:solid #4db6ac 2px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-p {
-    color: white;
-    font-family: "Helvetica";
+#synTable{
+    margin-top: 60px;
+}
+
+
+#newExBtn{
+margin: 60px auto;
+}
+
+.selectCont{
+padding: 00px 50px;
 }
