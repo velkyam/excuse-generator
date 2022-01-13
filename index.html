@@ -8,36 +8,43 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        media="screen,projection" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Excuse Generator</title>
 </head>
 
 <body>
-    
 
-<!-- Main Container Start -->
+
+    <!-- Main Container Start -->
     <div class="row">
-        
-       <section class="white col s10 m6 l4 m-6 offset-l4 offset-m3 offset-s1 mainContainer">
-           <div class="selectCont">
-            <h2 class="header">Excuse Generator</h2>
-            <div class="input-field">
-                <p class="label">Enter recipient's name:</p>
-                <input placeholder="John, Mark, Sarah, ..."id="receiver-input" type="text">
-            </div>
-            <div class="input-field">
-                <p class="label">Are you sending email or text?</p>
-                <select id="emailText">
-                    <option value="" disabled selected>Email or Text?</option>
-                    <option value='0'>Email</option>
-                    <option value='1'>Text</option>
-                </select>
-            </div>
-            <div id="nameField" class="input-field" hidden>
-                <p class="label">Enter your name:</p>
-                <input placeholder="Alex, Bernardo, Dat, Lorena, ..."id="user-input" type="text">
-            </div>
+
+        <section class="white col s10 m6 l4 m-6 offset-l4 offset-m3 offset-s1 mainContainer">
+            <div class="selectCont">
+                <h2 class="header">Excuse Generator</h2>
+                <div class="input-field">
+                    <p class="label">Enter recipient's name:</p>
+                    <input placeholder="John, Mark, Sarah, ..." id="receiver-input" type="text">
+                </div>
+                
+                <div>
+                    <p class="label">Are you sending email or text?</p>
+                    <a id="dropBtn" id="emailText" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Email or SMS?  <i class="material-icons">arrow_drop_down</i></a>
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><a id="email"><i class="material-icons">email</i>Email</a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li><a id="text"><i class="material-icons">sms</i>SMS</a></li>
+                    </ul>
+                </div>
+                
+                <div id="nameField" class="input-field" hidden>
+                    <p class="label">Enter your name:</p>
+                    <input placeholder="Alex, Bernardo, Dat, Lorena, ..." id="user-input" type="text">
+                </div>
+
+                <!-- Category hidden -->
                 <!-- <div class="input-field">
                     <p class="label">What occasion is your excuse for?</p>
                     <select id="category">
@@ -48,42 +55,44 @@
                         <option value="college">College</option>
                         <option value="party">Party</option>
                     </select>
-                </div> -->
+                </div> 
+            </div> -->
+
+            <button id="newExBtn" class="waves-effect waves-light btn col s6 offset-s3 modal-trigger" href="#modal1">Get
+                Excuse</button>
+        </section>
+    </div>
+    <!-- Main Container End -->
+
+
+    <!-- Excuse container -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h3>Your Excuse:</h3>
+            <!-- oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' -->
+            <textarea class="excuseArea" id="excuse-input" name="text" rows="4" cols="50"> </textarea>
+            <button class="waves-effect waves-light btn col s6 offset-s3" id="copyBtn">Copy Excuse</button>
+            <!-- Synonym App Starts Here -->
+            <div id="synTable">
+                <h5>Use our Thesaurus:</h5>
+                <input type="text" id="synInput" name="synInput" placeholder="Enter your word"></input>
+                <button class="waves-effect waves-light btn col s6 offset-s3" id="synBtn">Find better word</button>
+                <ul id="synonyms"></ul>
             </div>
-            <button id="newExBtn"class= "waves-effect waves-light btn col s6 offset-s3 modal-trigger" href="#modal1" >Get Excuse</button>
-            </section>
+            <!-- Synonym App Ends Here -->
+
         </div>
-        <!-- Main Container End -->
-
-
-   <!-- Excuse container -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h3>Your Excuse:</h3>
-      <h6 class="suggestion">Feel free to edit your excuse!</h6>
-      <!-- oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' -->
-      <textarea class="excuseArea" id="excuse-input" name="text" rows="4" cols="50"> </textarea>
-      <button class="waves-effect waves-light btn col s6 offset-s3" id="copyBtn">Copy Excuse</button>
-       <!-- Synonym App Starts Here -->
-    <div id="synTable">
-        <h5>Use our Thesaurus:</h5>
-        <input type="text" id="synInput" name="synInput" placeholder="Enter your word"></input>
-        <button class="waves-effect waves-light btn col s6 offset-s3" id="synBtn">Find better word</button>
-        <ul id="synonyms"></ul>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
     </div>
-    <!-- Synonym App Ends Here -->
-
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-    </div>
-  </div>
 
     <!-- end of excuse container -->
 
 
     <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>

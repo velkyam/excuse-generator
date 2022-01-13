@@ -1,20 +1,16 @@
 M.AutoInit();
 
-//////     Individual element Init        TEST    ///////
+function init() {
+  var elems = document.querySelectorAll('.dropdown-trigger');
+  var dropdownOptions = {
+    'hover': false
+  }
+  dropBtn = M.Dropdown.init(elems, dropdownOptions);
+}
 
-// function init() {
-//   var elems = document.querySelectorAll('.dropdown-trigger');
-//   var dropdownOptions = {
-//     'hover': false
-//   }
-//   dropBtn = M.Dropdown.init(elems, dropdownOptions);
-// }
+var instance = M.Dropdown.getInstance(dropdown1);
 
-// var instance = M.Dropdown.getInstance(dropdown1);
-
-// init();
-
-//////     Individual element Init        TEST    ///////
+init();
 
 
 var time = moment().format("H")
@@ -34,14 +30,23 @@ var userName =document.querySelector('#user-input')
 var emailText = document.querySelector('#emailText')
 var nameField = document.querySelector('#nameField')
 
-//hide or show nameField
-emailText.addEventListener('change',(event)=>{
-if (event.target.value==='0'){
-nameField.hidden = false;}
-else {
-  nameField.hidden =true;
-}
+var email = document.querySelector('#email')
+var text = document.querySelector('#text')
+var emailText = 5
+
+
+//new email button
+email.addEventListener('click',function(event){
+  emailText = 0
+  nameField.hidden = false;
 })
+
+//new text button
+text.addEventListener('click',function(event){
+  emailText = 1
+  nameField.hidden =true;
+})
+
 
 //Email Greetings based on time
 if (time>=5&&time<11){
@@ -67,10 +72,10 @@ newExBtn.addEventListener('click',function(event){
 
   
   
-  if (emailText.value==='0'){
+  if (emailText===0){
     var category = emailCat[catIndex]
     
-  } else if(emailText.value==='1') {
+  } else if(emailText===1) {
     var category = textCat[catIndex]
   }
   
@@ -92,20 +97,12 @@ newExBtn.addEventListener('click',function(event){
         var apiExcuse = data[0].death
       }
 
-      //empty fields
-  if(receiver=="" || receiver == null){
-    receiver.value==="[Recepient's name]"
-  } else if (userName==""|| userName == null){
-   userName.value==="[Your name]"
-  }
-  console.log(receiver.value)
-  console.log(userName.value)
       
       // Full excuse
-      if (emailText.value==='0'){
+      if (emailText === 0){
         // email 
         excuseText.value = greeting + receiver.value + ", "+'\r\n' +'\r\n' +apiExcuse + apologies[apologiesIndex]+'\r\n'+'\r\n' + emailClosing[emailIndex]+'\r\n'+'\r\n'+ userName.value;
-      } else if(emailText.value==='1') {
+      } else if(emailText === 1) {
         // text
         excuseText.value= informalGreeting[informalIndex]+receiver.value+". "+ " Sorry but... "+apiExcuse 
       }
