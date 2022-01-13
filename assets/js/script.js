@@ -1,27 +1,20 @@
 M.AutoInit();
 
-///  Individual element Init
-var dropBtn = document.querySelector('#dropBtn');
+//////     Individual element Init        TEST    ///////
 
-function init() {
-  var elems = document.querySelectorAll('.dropdown-trigger');
-  var dropdownOptions = {
-    'hover': false
-  }
-  dropBtn = M.Dropdown.init(elems, dropdownOptions);
-}
+// function init() {
+//   var elems = document.querySelectorAll('.dropdown-trigger');
+//   var dropdownOptions = {
+//     'hover': false
+//   }
+//   dropBtn = M.Dropdown.init(elems, dropdownOptions);
+// }
 
-init();
+// var instance = M.Dropdown.getInstance(dropdown1);
 
+// init();
 
-var instance = M.Dropdown.getInstance(dropdown1);
-
-var destroyBtn = document.querySelector('#destroy');
-
-destroyBtn.addEventListener('click', function (event) {
-  // instance.destroy();
-  console.log("destroy_btn")
-})
+//////     Individual element Init        TEST    ///////
 
 
 var time = moment().format("H")
@@ -35,11 +28,20 @@ var apologies = [" I'm so sorry.", ' Sorry in advance.', ' I apologize for any i
 var newExBtn=document.querySelector('#newExBtn')
 var copyBtn=document.querySelector('#copyBtn')
 var excuseText = document.querySelector('#excuse-input')
-
 var category = document.querySelector('#category')
 var receiver =document.querySelector('#receiver-input')
 var userName =document.querySelector('#user-input')
 var emailText = document.querySelector('#emailText')
+var nameField = document.querySelector('#nameField')
+
+//hide or show nameField
+emailText.addEventListener('change',(event)=>{
+if (event.target.value==='0'){
+nameField.hidden = false;}
+else {
+  nameField.hidden =true;
+}
+})
 
 //Email Greetings based on time
 if (time>=5&&time<11){
@@ -52,15 +54,29 @@ if (time>=5&&time<11){
   var greeting='Hello '
 }
 
+
 //new excuse button
 newExBtn.addEventListener('click',function(event){
   // add +category.value to theURL to get excuse from category
-  var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/'
   var emailCat=['office', 'children', 'college']
-  var textCat=['party','office','children', 'college']
+  var textCat=['party','children', 'college']
   var  emailIndex = Math.floor(Math.random()*(emailClosing.length))
   var  apologiesIndex = Math.floor(Math.random()*(apologies.length))
   var  informalIndex = Math.floor(Math.random()*(informalGreeting.length))
+  var catIndex = Math.floor(Math.random()*(emailCat.length))
+
+  
+  
+  if (emailText.value==='0'){
+    var category = emailCat[catIndex]
+    
+  } else if(emailText.value==='1') {
+    var category = textCat[catIndex]
+  }
+  
+  var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/'+category
+  console.log(requestUrl2)
+  console.log(category)
 
   function newExcuse(){
     fetch(requestUrl2)
@@ -75,6 +91,15 @@ newExBtn.addEventListener('click',function(event){
       } else if (data[0].death){
         var apiExcuse = data[0].death
       }
+
+      //empty fields
+  if(receiver=="" || receiver == null){
+    receiver.value==="[Recepient's name]"
+  } else if (userName==""|| userName == null){
+   userName.value==="[Your name]"
+  }
+  console.log(receiver.value)
+  console.log(userName.value)
       
       // Full excuse
       if (emailText.value==='0'){
@@ -87,6 +112,7 @@ newExBtn.addEventListener('click',function(event){
     });
   }
   newExcuse()
+  
   synUL.innerHTML ='';
 })
 

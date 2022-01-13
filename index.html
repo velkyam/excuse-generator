@@ -16,27 +16,6 @@
 <body>
     
 
-
-<!-- Materialize  TEST  Below -->
-
-  <!-- Dropdown Trigger -->
-  <a id="dropBtn" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
-  
-  <button id="destroy">Destroy Dropdown</button>
-
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-  </ul>
-
-
-<!-- Materialize  TEST  Above -->
-
 <!-- Main Container Start -->
     <div class="row">
         
@@ -48,17 +27,17 @@
                 <input placeholder="John, Mark, Sarah, ..."id="receiver-input" type="text">
             </div>
             <div class="input-field">
+                <p class="label">Are you sending email or text?</p>
+                <select id="emailText">
+                    <option value="" disabled selected>Email or Text?</option>
+                    <option value='0'>Email</option>
+                    <option value='1'>Text</option>
+                </select>
+            </div>
+            <div id="nameField" class="input-field" hidden>
                 <p class="label">Enter your name:</p>
                 <input placeholder="Alex, Bernardo, Dat, Lorena, ..."id="user-input" type="text">
             </div>
-                <div class="input-field">
-                    <p class="label">Are you sending email or text?</p>
-                    <select id="emailText">
-                        <option value="" disabled selected>Email or Text?</option>
-                        <option value='0'>Email</option>
-                        <option value='1'>Text</option>
-                    </select>
-                </div>
                 <!-- <div class="input-field">
                     <p class="label">What occasion is your excuse for?</p>
                     <select id="category">
@@ -81,6 +60,7 @@
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h3>Your Excuse:</h3>
+      <h6 class="suggestion">Feel free to edit your excuse!</h6>
       <!-- oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' -->
       <textarea class="excuseArea" id="excuse-input" name="text" rows="4" cols="50"> </textarea>
       <button class="waves-effect waves-light btn col s6 offset-s3" id="copyBtn">Copy Excuse</button>
