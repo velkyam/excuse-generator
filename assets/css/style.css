@@ -1,22 +1,8 @@
 html{
-    background-color: grey;
+    background-color: #e0e0e0;
     align-content: center;
 }
 
-.container-3 {
-    padding: 10px;
-    background-color: rgb(15, 119, 216);
-    width: 250px;
-    text-align: center;
-    border-radius: 10%;
-}
-
-
-#excuse-input {
-    height:200px;
-    width: 200px;
-    font-size:10px;
-}
 header {
     font-size: 18px;
     color: white;
@@ -24,18 +10,31 @@ header {
     font-weight: bold;
 }
 
-h1 {
+h2 {
     text-align: center;
-}
-.container-2 {
-    padding: 10px;
-    background-color: rgb(15, 119, 216);
-    width: 250px;
-    text-align: center;
-    border-radius: 10%;
+    color: #4db6ac;
 }
 
-p {
-    color: white;
-    font-family: "Helvetica";
+
+.mainContainer{
+    border: solid gray 1px;
+    border-radius: 15px;
+    box-shadow: 5px 3px 3px gray ;
+    max-width: 800px;
+}
+
+.containerEL{
+    margin: 20px;
+}
+.excuseArea
+{
+    height: 280px;
+    border:solid #4db6ac 2px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#synTable{
+    margin-top: 60px;
 }
