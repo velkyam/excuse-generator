@@ -80,7 +80,6 @@ newExBtn.addEventListener('click',function(event){
   
   if (emailText===0){
     var category = emailCat[catIndex]
-
   
   } else if(emailText===1) {
     var category = textCat[catIndex]
