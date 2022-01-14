@@ -1,3 +1,4 @@
+
 html {
     background-color: #e0e0e0;
     align-content: center;
@@ -14,8 +15,7 @@ h2 {
 
 
 .mainContainer{
-    border: solid gray 1px;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 5px 3px 3px gray ;
     max-width: 800px;
     display: flex;
@@ -49,6 +49,11 @@ h2 {
     margin-top: 30px;
 }
 
+/* unvisited link for email btn */
+#send {
+    color: white;
+  }
+
 #dropBtn{
     margin: 5px auto;
     display: flex;
@@ -67,13 +72,12 @@ padding: 00px 50px;
 
 @media screen and (max-width: 768px) {
     .mainContainer{
-        border: solid gray 1px; 
         border-radius: 10px;
         display: flex;
         justify-content: center;
         flex-direction: column;
-        height: 98vh;
-        width: 98vw;
+        height: 100vh;
+        width: 100vw;
         margin: 0.5em auto;  
     }
     
