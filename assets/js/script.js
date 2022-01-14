@@ -134,6 +134,7 @@ copyBtn.addEventListener('click', function (event) {
 var synTable = document.querySelector('#synTable')
 var synBtn = document.querySelector('#synBtn')
 var synUL = document.querySelector('#synonyms')
+synUL.setAttribute("class","responsive-table")
 var synInput = document.querySelector('#synInput')
 
 function synonymRun() {
@@ -146,6 +147,9 @@ function synonymRun() {
 
   
   .then(function (data) {
+    console.log(data)
+
+    if(data.length>0){
       var synArray = data[1].meta.syns[0]
       for (let i = 0; i < synArray.length; i++) {
         var synonym = document.createElement("li")
@@ -155,15 +159,14 @@ function synonymRun() {
         // if (i === 10) { break; }
 
       }
-      
+    } else {
+    var noSyn = document.createElement("p")
+    noSyn.textContent = "Sorry. No synonyms were found. Try a different word."
+    synUL.appendChild(noSyn)
+    }
+
     });
   }
-  
-  // if(){
-  //   var noSyn = document.createElement("p")
-  //   noSyn.textContent = "Sorry. No synonyms were found. Try a different word."
-  //   synUL.appendChild(noSyn)
-  // }
 
   
   synBtn.addEventListener('click',function(event){
