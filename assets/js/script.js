@@ -141,6 +141,7 @@ copyBtn.addEventListener('click', function (event) {
   navigator.clipboard.writeText(excuseText.value);
 })
 
+
 //synonym app starts here
 var synTable = document.querySelector('#synTable')
 var synBtn = document.querySelector('#synBtn')
