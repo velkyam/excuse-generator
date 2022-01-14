@@ -1,3 +1,91 @@
-html{
-    background-color: blueviolet;
+html {
+    background-color: #e0e0e0;
+    align-content: center;
 }
+
+.header {
+   margin-bottom: 60px;
+}
+
+h2 {
+    text-align: center;
+    color: #4db6ac;
+}
+
+
+.mainContainer{
+    border: solid gray 1px;
+    border-radius: 15px;
+    box-shadow: 5px 3px 3px gray ;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 700px;
+    margin-top: 30px;
+}
+
+.modal{
+    max-width: 800px;
+    max-height: 800px;
+}
+
+.label{
+    font-size: 18px;
+    margin: 20px 0px;
+    font-weight: bold;
+}
+
+.excuseArea{
+    height: 280px;
+    border:solid #4db6ac 2px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+#synTable{
+    margin-top: 30px;
+}
+
+/* unvisited link for email btn */
+a:link {
+    color: white;
+  }
+
+#dropBtn{
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    margin-right: 80px;
+}
+    
+
+#newExBtn{
+margin: 30px auto;
+}
+
+.selectCont{
+padding: 00px 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .mainContainer{
+        border: solid gray 1px; 
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 98vh;
+        width: 98vw;
+        margin: 0.5em auto;  
+    }
+    
+    .modal{
+        height: 90vh;
+        width: 80vw;
+        margin: 1em auto;  
+    }
+}
+
