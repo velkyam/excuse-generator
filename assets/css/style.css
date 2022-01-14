@@ -49,6 +49,11 @@ h2 {
     margin-top: 30px;
 }
 
+/* unvisited link for email btn */
+a:link {
+    color: white;
+  }
+
 #dropBtn{
     margin: 5px auto;
     display: flex;
