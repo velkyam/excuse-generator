@@ -23,6 +23,8 @@ var apologies = [" I'm so sorry.", ' Sorry in advance.', ' I apologize for any i
 //random excuse, to add category and number -> add {category}/{number} to the url
 var newExBtn=document.querySelector('#newExBtn')
 var copyBtn=document.querySelector('#copyBtn')
+var mailBtn = document.querySelector('#mailBtn')
+var send = document.querySelector('#send')
 var excuseText = document.querySelector('#excuse-input')
 var category = document.querySelector('#category')
 var receiver =document.querySelector('#receiver-input')
@@ -40,6 +42,7 @@ var emailText = 0
 email.addEventListener('click',function(event){
   emailText = 0
   nameField.hidden = false;
+  mailBtn.style.display ='show'
   dropBtn.textContent = "Email"
 })
 
@@ -47,6 +50,7 @@ email.addEventListener('click',function(event){
 text.addEventListener('click',function(event){
   emailText = 1
   nameField.hidden =true;
+  mailBtn.style.display ='none'
   dropBtn.textContent = "SMS"
 })
 
@@ -77,9 +81,10 @@ newExBtn.addEventListener('click',function(event){
   
   if (emailText===0){
     var category = emailCat[catIndex]
-    
+  
   } else if(emailText===1) {
     var category = textCat[catIndex]
+    
   }
   
   var requestUrl2= 'https://excuser.herokuapp.com/v1/excuse/'+category
@@ -118,6 +123,12 @@ newExBtn.addEventListener('click',function(event){
         // text
         excuseText.value= informalGreeting[informalIndex]+receiver.value+emptyReceiver+". "+ " Sorry but... "+apiExcuse 
       }
+
+      //email message
+      var excuseMail = document.createElement("textarea")
+      excuseMail.value = greeting + receiver.value+ emptyReceiver + ", "+'%0D%0A%0D%0A' +apiExcuse + apologies[apologiesIndex]+'%0D%0A%0D%0A' + emailClosing[emailIndex]+'%0D%0A%0D%0A'+ userName.value+emptyUser;
+      send.setAttribute('href','mailto:?to=&body='+excuseMail.value+'&subject=')
+
     });
   }
   newExcuse()
@@ -134,6 +145,7 @@ copyBtn.addEventListener('click', function (event) {
 var synTable = document.querySelector('#synTable')
 var synBtn = document.querySelector('#synBtn')
 var synUL = document.querySelector('#synonyms')
+synUL.setAttribute("class","responsive-table")
 var synInput = document.querySelector('#synInput')
 
 function synonymRun() {
@@ -142,19 +154,31 @@ function synonymRun() {
   fetch(requestUrl)
     .then(function (response) {
       return response.json();
-    })
-    .then(function (data) {
-      var synArray = data[1].meta.syns[0]
+  })
 
+  
+  .then(function (data) {
+    console.log(data)
+
+    if(data.length>0){
+      var synArray = data[1].meta.syns[0]
       for (let i = 0; i < synArray.length; i++) {
         var synonym = document.createElement("li")
         synonym.textContent = synArray[i]
         synUL.appendChild(synonym)
         //maximum 10 synonyms
         // if (i === 10) { break; }
+
       }
+    } else {
+    var noSyn = document.createElement("p")
+    noSyn.textContent = "Sorry. No synonyms were found. Try a different word."
+    synUL.appendChild(noSyn)
+    }
+
     });
   }
+
   
   synBtn.addEventListener('click',function(event){
     
