@@ -27,8 +27,9 @@ var excuseText = document.querySelector('#excuse-input')
 var category = document.querySelector('#category')
 var receiver =document.querySelector('#receiver-input')
 var userName =document.querySelector('#user-input')
-var emailText = document.querySelector('#emailText')
+// var emailText = document.querySelector('#emailText')
 var nameField = document.querySelector('#nameField')
+var dropBtn = document.querySelector('#dropBtn')
 
 var email = document.querySelector('#email')
 var text = document.querySelector('#text')
@@ -39,12 +40,14 @@ var emailText = 0
 email.addEventListener('click',function(event){
   emailText = 0
   nameField.hidden = false;
+  dropBtn.textContent = "Email"
 })
 
 //new text button
 text.addEventListener('click',function(event){
   emailText = 1
   nameField.hidden =true;
+  dropBtn.textContent = "SMS"
 })
 
 

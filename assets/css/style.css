@@ -21,33 +21,66 @@ h2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 860px;
-    margin-top: 100px;
+    height: 700px;
+    margin-top: 30px;
 }
+
+.modal{
+    max-width: 800px;
+    max-height: 800px;
+}
+
 .label{
     font-size: 18px;
     margin: 20px 0px;
     font-weight: bold;
 }
 
-.excuseArea
-{
+.excuseArea{
     height: 280px;
     border:solid #4db6ac 2px;
     border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
+
 
 #synTable{
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
+#dropBtn{
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    margin-right: 80px;
+}
+    
 
 #newExBtn{
-margin: 60px auto;
+margin: 30px auto;
 }
 
 .selectCont{
 padding: 00px 50px;
 }
+
+@media screen and (max-width: 768px) {
+    .mainContainer{
+        border: solid gray 1px; 
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 98vh;
+        width: 98vw;
+        margin: 0.5em auto;  
+    }
+    
+    .modal{
+        height: 90vh;
+        width: 80vw;
+        margin: 1em auto;  
+    }
+}
+
