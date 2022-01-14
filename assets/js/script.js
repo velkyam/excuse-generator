@@ -23,12 +23,8 @@ var apologies = [" I'm so sorry.", ' Sorry in advance.', ' I apologize for any i
 //random excuse, to add category and number -> add {category}/{number} to the url
 var newExBtn=document.querySelector('#newExBtn')
 var copyBtn=document.querySelector('#copyBtn')
-<<<<<<< HEAD
-var emailBtn=document.querySelector('#emailbtn')
-=======
 var mailBtn = document.querySelector('#mailBtn')
 var send = document.querySelector('#send')
->>>>>>> ac0e650d595403e77db026f7a3e5d5a01248ccd6
 var excuseText = document.querySelector('#excuse-input')
 var category = document.querySelector('#category')
 var receiver =document.querySelector('#receiver-input')

@@ -12,3 +12,13 @@ WHenhave finished putting my inputs and choosing email then I can click "Get Exc
 When I click that button THEN a new window opens with my excuse THEN I can click the copy button or the Send Email button to have my preformatted email open my default browser. 
 When the new window pops up THEN I can scroll down to find synonms to words I want to change from the exucse or preformatted text. 
 
+## Usage
+
+ ```md
+    ![app](assets/images/firstgif.gif)
+    ```
+## Credits 
+https://github.com/velkyam
+https://github.com/bdibil
+https://github.com/lzvalentin
+https://github.com/Gamunale
