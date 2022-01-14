@@ -31,15 +31,15 @@
                 
                 <div>
                     <p class="label">Are you sending email or text?</p>
-                    <a id="dropBtn" id="emailText" class='dropdown-trigger btn col s10 offset-s3' href='#' data-target='dropdown1'>Email or SMS? <i class="material-icons">arrow_drop_down</i></a>
+                    <a id="dropBtn" id="emailText" class='dropdown-trigger btn col s10 offset-s3' href='#' data-target='dropdown1'>Email<i class="material-icons">arrow_drop_down</i></a>
                     <ul id='dropdown1' class='dropdown-content'>
                         <li><a id="email"><i class="material-icons">email</i>Email</a></li>
                         <li class="divider" tabindex="-1"></li>
                         <li><a id="text"><i class="material-icons">sms</i>SMS</a></li>
                     </ul>
                 </div>
-                
-                <div id="nameField" class="input-field" hidden>
+                <br><br>
+                <div id="nameField">
                     <p class="label">Enter your name:</p>
                     <input placeholder="Alex, Bernardo, Dat, Lorena, ..." id="user-input" type="text">
                 </div>
@@ -72,7 +72,7 @@
             <!-- oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' -->
             <textarea class="excuseArea flow-text" id="excuse-input" name="text"> </textarea>
             <button class="waves-effect waves-light btn col s6 offset-s3" id="copyBtn">Copy Excuse</button>
-            <button class="waves-effect waves-light btn col s6 offset-s3" id="mailBtn"><a id='send'>SEND AS EMAIL</a></button>
+            <button class="waves-effect waves-light btn col s6 offset-s3 material-icons right" id="mailBtn"><a id='send'>Send as email<i class="material-icons right">send</i></a></button>
             <!-- Synonym App Starts Here -->
             <div id="synTable">
                 <h5>Use our Thesaurus:</h5>
