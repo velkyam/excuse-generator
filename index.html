@@ -31,7 +31,7 @@
                 
                 <div>
                     <p class="label">Are you sending email or text?</p>
-                    <a id="dropBtn" id="emailText" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Email or SMS?  <i class="material-icons">arrow_drop_down</i></a>
+                    <a id="dropBtn" id="emailText" class='dropdown-trigger btn col s10 offset-s3' href='#' data-target='dropdown1'>Email or SMS? <i class="material-icons">arrow_drop_down</i></a>
                     <ul id='dropdown1' class='dropdown-content'>
                         <li><a id="email"><i class="material-icons">email</i>Email</a></li>
                         <li class="divider" tabindex="-1"></li>
@@ -58,7 +58,7 @@
                 </div> 
             </div> -->
 
-            <button id="newExBtn" class="waves-effect waves-light btn col s6 offset-s3 modal-trigger" href="#modal1">Get
+            <button id="newExBtn" class="waves-effect waves-light btn col s10 offset-s3 modal-trigger" href="#modal1">Get
                 Excuse</button>
         </section>
     </div>
@@ -66,11 +66,11 @@
 
 
     <!-- Excuse container -->
-    <div id="modal1" class="modal">
+    <div id="modal1" class="modal modal-fixed-footer">
         <div class="modal-content">
-            <h3>Your Excuse:</h3>
+            <h5>Your Excuse:</h5>
             <!-- oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' -->
-            <textarea class="excuseArea" id="excuse-input" name="text" rows="4" cols="50"> </textarea>
+            <textarea class="excuseArea flow-text" id="excuse-input" name="text"> </textarea>
             <button class="waves-effect waves-light btn col s6 offset-s3" id="copyBtn">Copy Excuse</button>
             <button class="waves-effect waves-light btn col s6 offset-s3" id="mailBtn">
                 <a href="mailto:?to=&body=AAA,&subject=BBB #ffffff">MAIL</a>
@@ -79,14 +79,15 @@
             <div id="synTable">
                 <h5>Use our Thesaurus:</h5>
                 <input type="text" id="synInput" name="synInput" placeholder="Enter your word"></input>
-                <button class="waves-effect waves-light btn col s6 offset-s3" id="synBtn">Find better word</button>
+
                 <ul id="synonyms"></ul>
             </div>
             <!-- Synonym App Ends Here -->
 
         </div>
         <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            <button class="waves-effect waves-light btn col s6 offset-s3" id="synBtn">Find better word</button>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close  <i class="material-icons">close</i></a>
         </div>
     </div>
 
