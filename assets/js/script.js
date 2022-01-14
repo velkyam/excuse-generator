@@ -171,3 +171,11 @@ function synonymRun() {
 
   //synonym app ends here
  
+// close button and refresh page starts here
+const refreshButton = document.querySelector('.modal-close');
+const refreshPage = () => {
+  location.reload();
+}
+
+refreshButton.addEventListener('click', refreshPage)
+// close button and refresh page ends here
