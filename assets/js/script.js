@@ -42,7 +42,7 @@ var emailText = 0
 email.addEventListener('click',function(event){
   emailText = 0
   nameField.hidden = false;
-  mailBtn.style.display ='show'
+  
   dropBtn.textContent = "Email"
 })
 
@@ -50,7 +50,7 @@ email.addEventListener('click',function(event){
 text.addEventListener('click',function(event){
   emailText = 1
   nameField.hidden =true;
-  mailBtn.style.display ='none'
+  
   dropBtn.textContent = "SMS"
 })
 
@@ -81,9 +81,11 @@ newExBtn.addEventListener('click',function(event){
   
   if (emailText===0){
     var category = emailCat[catIndex]
+    mailBtn.style.display ='show'
   
   } else if(emailText===1) {
     var category = textCat[catIndex]
+    mailBtn.style.display ='none'
     
   }
   
