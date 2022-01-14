@@ -23,6 +23,7 @@ var apologies = [" I'm so sorry.", ' Sorry in advance.', ' I apologize for any i
 //random excuse, to add category and number -> add {category}/{number} to the url
 var newExBtn=document.querySelector('#newExBtn')
 var copyBtn=document.querySelector('#copyBtn')
+var emailBtn=document.querySelector('#emailbtn')
 var excuseText = document.querySelector('#excuse-input')
 var category = document.querySelector('#category')
 var receiver =document.querySelector('#receiver-input')
@@ -129,6 +130,7 @@ newExBtn.addEventListener('click',function(event){
 copyBtn.addEventListener('click', function (event) {
   navigator.clipboard.writeText(excuseText.value);
 })
+
 
 //synonym app starts here
 var synTable = document.querySelector('#synTable')
