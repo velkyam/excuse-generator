@@ -139,19 +139,29 @@ function synonymRun() {
   fetch(requestUrl)
     .then(function (response) {
       return response.json();
-    })
-    .then(function (data) {
-      var synArray = data[1].meta.syns[0]
+  })
 
+  
+  .then(function (data) {
+      var synArray = data[1].meta.syns[0]
       for (let i = 0; i < synArray.length; i++) {
         var synonym = document.createElement("li")
         synonym.textContent = synArray[i]
         synUL.appendChild(synonym)
         //maximum 10 synonyms
         // if (i === 10) { break; }
+
       }
+      
     });
   }
+  
+  // if(){
+  //   var noSyn = document.createElement("p")
+  //   noSyn.textContent = "Sorry. No synonyms were found. Try a different word."
+  //   synUL.appendChild(noSyn)
+  // }
+
   
   synBtn.addEventListener('click',function(event){
     
