@@ -49,12 +49,8 @@ email.addEventListener('click',function(event){
 //new text button
 text.addEventListener('click',function(event){
   emailText = 1
-<<<<<<< HEAD
-  nameField.hidden = true;
-=======
   nameField.hidden =true;
   mailBtn.style.display ='none'
->>>>>>> ac0e650d595403e77db026f7a3e5d5a01248ccd6
   dropBtn.textContent = "SMS"
 })
 
