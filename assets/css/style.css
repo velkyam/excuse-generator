@@ -26,8 +26,9 @@ h2 {
 }
 
 .modal{
-    max-width: 800px;
+     max-width: 800px;
     max-height: 800px;
+
 }
 
 .label{
@@ -70,6 +71,8 @@ margin: 30px auto;
 padding: 00px 50px;
 }
 
+
+
 @media screen and (max-width: 768px) {
     .mainContainer{
         border: solid gray 1px; 
@@ -85,6 +88,11 @@ padding: 00px 50px;
     .modal{
         height: 90vh;
         width: 80vw;
+        margin: 1em auto;  
+    }
+    #copybtn #mailbtn{
+        width: 100px; 
+        max-width: 100%;
         margin: 1em auto;  
     }
 }
