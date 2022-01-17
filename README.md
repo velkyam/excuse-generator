@@ -18,9 +18,9 @@ When the new window pops up THEN I can scroll down to find synonms to words I wa
 
 ## Usage
 
- ```md
-    ![app](assets/images/firstgif.gif)
-    ```
+
+![](assets/images/firstgif.gif)
+
 ## Credits 
 https://github.com/velkyam
 https://github.com/bdibil
