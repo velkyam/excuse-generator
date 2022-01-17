@@ -25,9 +25,12 @@ h2 {
     margin-top: 30px;
 }
 
-.modal{
-    max-width: 800px;
-    max-height: 800px;
+/* drop down in container  */
+#dropBtn{
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    margin-right: 80px;
 }
 
 .label{
@@ -36,6 +39,11 @@ h2 {
     font-weight: bold;
 }
 
+.modal{
+    max-width: 800px;
+   max-height: 800px;
+
+}
 .excuseArea{
     height: 280px;
     border:solid #4db6ac 2px;
@@ -45,23 +53,13 @@ h2 {
 }
 
 
-#synTable{
-    margin-top: 30px;
-}
 
-/* unvisited link for email btn */
+/* send btn in modal */
 #send {
     color: white;
   }
 
-#dropBtn{
-    margin: 5px auto;
-    display: flex;
-    justify-content: center;
-    margin-right: 80px;
-}
     
-
 #newExBtn{
 margin: 30px auto;
 }
@@ -69,6 +67,12 @@ margin: 30px auto;
 .selectCont{
 padding: 00px 50px;
 }
+
+/* synonym section */
+#synTable{
+    margin-top: 30px;
+}
+
 
 @media screen and (max-width: 768px) {
     .mainContainer{
@@ -86,5 +90,6 @@ padding: 00px 50px;
         width: 80vw;
         margin: 1em auto;  
     }
+
 }
 
