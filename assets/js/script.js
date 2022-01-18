@@ -37,12 +37,11 @@ var email = document.querySelector('#email')
 var text = document.querySelector('#text')
 var emailText = 0
 
-
 //new email button
 email.addEventListener('click',function(event){
   emailText = 0
   nameField.hidden = false;
-  
+  mailBtn.style.visibility = "visible";
   dropBtn.textContent = "Email"
 })
 
@@ -50,7 +49,7 @@ email.addEventListener('click',function(event){
 text.addEventListener('click',function(event){
   emailText = 1
   nameField.hidden =true;
-  
+  mailBtn.style.visibility = "hidden";
   dropBtn.textContent = "SMS"
 })
 
@@ -81,11 +80,9 @@ newExBtn.addEventListener('click',function(event){
   
   if (emailText===0){
     var category = emailCat[catIndex]
-    mailBtn.style.display ='show'
   
   } else if(emailText===1) {
     var category = textCat[catIndex]
-    mailBtn.style.display ='none'
     
   }
   
@@ -164,7 +161,7 @@ function synonymRun() {
     console.log(data)
 
     if(data.length>0){
-      var synArray = data[1].meta.syns[0]
+      var synArray = data[0].meta.syns[0]
       for (let i = 0; i < synArray.length; i++) {
         var synonym = document.createElement("li")
         synonym.textContent = synArray[i]
