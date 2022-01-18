@@ -161,7 +161,7 @@ function synonymRun() {
     console.log(data)
 
     if(data.length>0){
-      var synArray = data[1].meta.syns[0]
+      var synArray = data[0].meta.syns[0]
       for (let i = 0; i < synArray.length; i++) {
         var synonym = document.createElement("li")
         synonym.textContent = synArray[i]
