@@ -21,7 +21,7 @@
     <!-- Main Container Start -->
     <div class="row">
 
-        <section class="white col s12 m6 l4 m-6 offset-l4 offset-m3  mainContainer">
+        <section class="white col s12 l4 offset-l4  mainContainer">
             <div class="selectCont">
                 <h2 class="header">Excuse Generator</h2>
                 <div class="input-field">
@@ -29,9 +29,9 @@
                     <input placeholder="John, Mark, Sarah, ..." id="receiver-input" type="text">
                 </div>
                 
-                <div>
+                <div class="emailortext">
                     <p class="label">Are you sending email or text?</p>
-                    <a id="dropBtn" id="emailText" class='dropdown-trigger btn col s10 offset-s3' href='#' data-target='dropdown1'>Email<i class="material-icons">arrow_drop_down</i></a>
+                    <a id="dropBtn" id="emailText" class='dropdown-trigger btn offset-s3' href='#' data-target='dropdown1'>Email<i class="material-icons">arrow_drop_down</i></a>
                     <ul id='dropdown1' class='dropdown-content'>
                         <li><a id="email"><i class="material-icons">email</i>Email</a></li>
                         <li class="divider" tabindex="-1"></li>
@@ -58,7 +58,7 @@
                 </div> 
             </div> -->
 
-            <button id="newExBtn" class="waves-effect waves-light btn col s10 offset-s3 modal-trigger" href="#modal1">Get
+            <button id="newExBtn" class="waves-effect waves-light btn col s10 offset-s3 modal-trigger btn-large" href="#modal1">Get
                 Excuse</button>
         </section>
     </div>
@@ -71,10 +71,10 @@
             <h5>Your Excuse:</h5>
             <!-- oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' -->
             <textarea class="excuseArea flow-text" id="excuse-input" name="text"> </textarea>
-            <button class="waves-effect waves-light btn col s6 offset-s3" id="copyBtn">Copy Excuse</button>
-
-            <button id='mailBtn' class="waves-effect waves-light btn col s6 offset-s3 material-icons right"><a id='send'>Send as email<i class="material-icons right">send</i></a></button>
-
+            <div class='modalBtns'>
+            <button class="waves-effect waves-light btn col s6 offset-s3" id="copyBtn">Copy Excuse<i class="material-icons right">content_copy</i></button>
+            <button id='mailBtn' class="waves-effect waves-light btn col s6 offset-s3 right"><a id='send'>Send as email<i class="material-icons right">send</i></a></button>
+            </div>
             <!-- Synonym App Starts Here -->
             <div id="synTable">
                 <h5>Use our Thesaurus:</h5>
@@ -86,7 +86,7 @@
 
         </div>
         <div class="modal-footer">
-            <button class="waves-effect waves-light btn col s6 offset-s3" id="synBtn">Find better word</button>
+            <button class="waves-effect waves-light btn col s6 offset-s3 left" id="synBtn">Find better word</button>
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close  <i class="material-icons">close</i></a>
         </div>
     </div>

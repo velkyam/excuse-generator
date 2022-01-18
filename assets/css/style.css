@@ -1,5 +1,21 @@
-
-html {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Gives the body element a parent height to compare against */
+  html {
+    height: 100%;
+  }
+  
+  body {
+    min-height: 100%;
+    line-height: 1;
+    font-family: sans-serif;
+  }
+  
+  html {
     background-color: #e0e0e0;
     align-content: center;
 }
@@ -17,7 +33,7 @@ h2 {
 .mainContainer{
     border-radius: 10px;
     box-shadow: 5px 3px 3px gray ;
-    max-width: 800px;
+    max-width: 1024px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -59,22 +75,24 @@ h2 {
     color: white;
   }
 
+#dropBtn{
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+}
     
 #newExBtn{
 margin: 30px auto;
 }
 
 .selectCont{
-padding: 00px 50px;
+padding: 0px 50px;
+display: flex;
+flex-direction: column;
+
 }
 
-/* synonym section */
-#synTable{
-    margin-top: 30px;
-}
-
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .mainContainer{
         border-radius: 10px;
         display: flex;
@@ -82,7 +100,7 @@ padding: 00px 50px;
         flex-direction: column;
         height: 100vh;
         width: 100vw;
-        margin: 0.5em auto;  
+        /* margin: 0.5em auto;   */
     }
     
     .modal{
@@ -91,5 +109,22 @@ padding: 00px 50px;
         margin: 1em auto;  
     }
 
+    .mainContainer{
+        border-radius: 0px;
+        box-shadow: none;
+        margin: 0px;
+    }
+
+    .modalBtns{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mailBtn{
+        margin: 10px;
+    }
+    #copyBtn{
+        margin:10px;
+    }
 }
 
