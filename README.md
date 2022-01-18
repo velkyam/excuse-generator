@@ -1,4 +1,8 @@
 # excuse-generator
+The goal of this app was to generate random exucses that was able to be preformatted for you in a email format or a SMS format. You are also capable of looking up synonyms to a word you want to change in the text. 
+
+Deployed Application Link: 
+https://velkyam.github.io/excuse-generator/#team-8
 
 ## User Story 
 AS someone who has a busy schedule or antisocial moods<br>
